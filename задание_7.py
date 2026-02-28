@@ -1,3 +1,7 @@
-text = 'total growth is 300%'
+text = input()
+length = []
 
-print(min([len(x) for x in text.split()]))
+for letter in text.split():
+    length.append(len(letter))
+    min_lenght = min(length)
+print(min_lenght)
