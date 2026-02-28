@@ -1,6 +1,6 @@
-text = 'hahafffffffff text bou spaces oo000000hohoh     '
+text = input()
 
-for i in text:
-    if text.count(i) == 3:
-        print(i)
+for symbol in text:
+    if text.count(symbol) == 3:
+        print(symbol)
         break
