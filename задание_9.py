@@ -1,6 +1,7 @@
-text = "easy isn't always easy"
+text = input()
 
-for i in text.split():
-    if text.count(i) == 2:
-        print(i)
+for letter in text.split():
+    if text.count(letter) == 2:
+        print(letter)
         break
+
