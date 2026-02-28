@@ -1,4 +1,4 @@
-text = '(((  (((((   )))  )))))'
+text = input()
 
 if text.count('(') == text.count(')'):
     print('Right!')
