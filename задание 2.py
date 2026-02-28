@@ -1,11 +1,13 @@
-text = 'hahafffffffff text about spaces oo000000hohoh     '
+text = input()
 
-c = 1
-k = 1
-for i in range(len(text) - 1):
-    if text[i] == text[i + 1]:
-        c += 1
-        k = max(k, c)
-    else:
-        c = 1
-print(k)
+count = 1
+max_count = 1
+
+for symbol in range(len(text) - 1):
+    if text[symbol] == text[symbol + 1]:
+        count += 1
+    elif count > max_count:
+        max_count = count
+        count = 0
+
+print(max_count)
