@@ -1,13 +1,16 @@
-def not_again(word):
-    for i in word:
-        if word.count(i) == 1:
-            pass
-        else:
-            return False
-    return True
+text = input()
 
-text = "easy isn't always easy"
+words = text.split()
+first_word = words[0]
+result = []
 
-for i in text.split():
-    if i != text.split()[0] and not_again(i):
-        print(i, end=' ')
+def not_repeat(word):
+    for letter in word:
+        if word.count(letter) > 1:
+            return True
+    return False
+
+for word in words:
+    if not not_repeat(word) and word != first_word:
+        result.append(word)
+print(result)
