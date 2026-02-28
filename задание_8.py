@@ -1,3 +1,7 @@
-text = 'total growth is 300%'
+text = input()
+length = []
 
-print(sorted([x for x in text.split()], key=len))
+for letter in text.split():
+    length.append(len(letter))
+    length.sort() #.sort выводит элементы списка в порядке возрастания
+print(length)
