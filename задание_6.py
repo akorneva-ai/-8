@@ -1,5 +1,5 @@
-text = 'total growth is 300%'
+text = input()
 
-
-for k in range(len(text.split()) - 1, -1, -1):
-    print(text.split()[k], end=' ')
+# .split -> разбивает строку на список слов (по пробелам)
+for letter in range(len(text.split())- 1, -1, -1):
+    print(text.split()[letter], end=' ')
