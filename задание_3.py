@@ -1,6 +1,13 @@
-text = 'hahafffffffff text bou spaces oo000000hohoh     '
+text = input()
 
-for i in text:
-    if text.count(i) == 3:
-        print(i)
-        break
+count = 0
+result = []
+
+# .count() ->
+# -> кол-во определённого элемента в тексте
+
+for letter in text:
+    if letter not in result:
+        result.append(letter)
+        count += 1
+print(count)
