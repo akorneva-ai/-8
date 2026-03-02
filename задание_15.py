@@ -1,22 +1,31 @@
 print('Ведущий вводит строку: четырехзначное число с неповторяющимеся цифрами.')
+
 number = str(input())
-print('\n' * 25)
-turn = 0
-guess = str(input())
+
+print("\n" * 25, "Введите четырёхзначное число: ")
+
+player_input = str(input())
+count = 0
+
 while True:
-    turn += 1
+    count += 1
     cows = 0
     bulls = 0
-    for i in range(0, 4):
-        if guess[i] in number:
-            if guess[i] == number[i]:
-                bulls += 1
-            else:
-                cows += 1
+
+    for digit in range(0, 4):
+         if player_input[digit] == number[digit]:
+            bulls += 1
+         elif player_input[digit] != number[digit] and player_input[digit] in number:
+            cows += 1
+
     print(f'Быков: {bulls} Коров: {cows}')
+
     if bulls == 4:
-        print('Победа!')
-    if turn == 10:
-        print('Проигрыш!')
+        print("Победа!")
         break
-    guess = str(input())
+
+    if count > 10:
+        print("Проигрыш!")
+        break
+
+    player_input = str(input())
