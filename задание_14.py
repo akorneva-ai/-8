@@ -1,7 +1,7 @@
 print("Ведущий вводит две строки: подсказку и загаданное слово.")
 
 hint = input()
-hiden_word = str(input())
+hiden_word = input()
 guess = len(hiden_word) * "*"
 
 print("\n" * 25)
@@ -43,3 +43,4 @@ while True:
             print("Проигрыш!")
 
     break
+
